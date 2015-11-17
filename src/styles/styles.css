@@ -1,6 +1,34 @@
-.hidden{
-    display: none;
+.jsTable:not(:empty){
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-radius: 0.5em;
+    padding: 2em 1em 1em 1em;
+    overflow: auto;
+    border: solid lightgrey 1px;
+    min-height: 0%; /* This is work around for IE9 bug that extends table: http://stackoverflow.com/questions/5788726/add-remove-css-will-cause-ie9-to-increase-the-tables-height*/
 }
-.red{
-    color: #b00000;
+.jsTable table{
+    border-collapse: collapse;
+    width: 99%;
+}
+.jsTable th,
+.jsTable td{
+    padding: 0.3em 3em 0.3em 1em;
+    color: rgb(51,51,51);
+}
+.jsTable th{
+    border-bottom: solid lightgrey 2px;
+    text-align: left;
+}
+.jsTable td{
+    border-bottom: dotted whitesmoke 1px;
+}
+tr:nth-child(even){
+    background-color: #fcfcfc;
+}
+tr:hover:not(:nth-child(1)){
+    background-color: rgba(240, 248, 255, 0.47);
+}
+.Light_Weight_Table{
+    margin-top: 1em;
 }
